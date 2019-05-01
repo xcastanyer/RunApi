@@ -1,0 +1,11 @@
+<h3 class ="mat-h3" i18n="@@confirmActionTitle">
+  Confirm {{action}} !
+</h3>
+<mat-dialog-content>
+  {{message}}
+</mat-dialog-content>
+<mat-dialog-actions>
+  <span class="spacer"></span>
+  <button mat-button mat-dialog-close color="secondary" (click)="cancel()" i18n="@@cancelButton">Cancel</button>
+  <button mat-button color="primary" (click)="confirm()" i18n="@@confirmButton">Confirm</button>
+</mat-dialog-actions>

@@ -1,0 +1,42 @@
+<h2>Async Hero Message and AsyncPipe</h2>
+    <p>Message: {{ message$ | async }}</p>
+    <button mat-button (click)="resend()">Resend</button>
+
+    <!-- <mat-form-field>
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+      </mat-form-field>
+       -->
+      <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="employees" matSort>
+      
+          <!-- ID Column -->
+          <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Id. </th>
+            <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+          </ng-container>
+      
+          <!-- Progress Column -->
+          <ng-container matColumnDef="employee_name">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Nom </th>
+            <td mat-cell *matCellDef="let row"> {{row.employee_name}}% </td>
+          </ng-container>
+      
+          <!-- Name Column -->
+          <ng-container matColumnDef="employee_salary">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Salari </th>
+            <td mat-cell *matCellDef="let row"> {{row.employee_salary}} </td>
+          </ng-container>
+      
+          <!-- Color Column -->
+          <ng-container matColumnDef="employee_age">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Edat </th>
+            <td mat-cell *matCellDef="let row"> {{row.employee_age}} </td>
+          </ng-container>
+      
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+          </tr>
+        </table>
+      
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+      </div>
