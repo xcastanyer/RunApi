@@ -6,7 +6,8 @@ import { RegistrationComponent } from './user/registration/registration.componen
 import { LoginComponent } from './user/login/login.component';
 import { HomeComponent } from './modules/home/pages/home/home.component';
 import { PruebaComponent } from './modules/prueba/pages/prueba.component';
-import { AgendaComponent } from './modules/agenda/components/agenda/agenda.component';
+import { CalendarioComponent } from './modules/agenda/components/calendario/calendario.component';
+
 
 
 
@@ -21,7 +22,7 @@ const routes: Routes = [
     ]
   },
   {path:'home',component:HomeComponent,canActivate:[AuthGuard]},
-  {path:'agenda',component:AgendaComponent,canActivate:[AuthGuard]},
+  {path:'agenda',component:CalendarioComponent,canActivate:[AuthGuard]},
   {path:'prueba',component:PruebaComponent,canActivate:[AuthGuard]}
 ];
 

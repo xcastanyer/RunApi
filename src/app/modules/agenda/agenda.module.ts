@@ -9,13 +9,14 @@ import { NgModule } from '@angular/core';
 
 import { FlatpickrModule } from 'angularx-flatpickr';
 import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
-import { AgendaComponent } from './components/agenda/agenda.component';
+import { CalendarioComponent } from './components/calendario/calendario.component';
+
 
 @NgModule({
   entryComponents:[
     
   ],
-  declarations: [AgendaComponent],
+  declarations: [CalendarioComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -26,6 +27,6 @@ import { AgendaComponent } from './components/agenda/agenda.component';
       useFactory: adapterFactory
     })
   ],
-  exports: [AgendaComponent]
+  exports: [CalendarioComponent]
 })
 export class AgendaModule { }

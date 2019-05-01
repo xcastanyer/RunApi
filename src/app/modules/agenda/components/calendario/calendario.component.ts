@@ -22,10 +22,10 @@ const colors: any = {
 @Component({
   selector: 'mwl-demo-component',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  styleUrls: ['agenda.component.css'],
-  templateUrl: 'agenda.component.html'
+  styleUrls: ['Calendario.component.css'],
+  templateUrl: 'Calendario.component.html'
 })
-export class AgendaComponent {
+export class CalendarioComponent {
   @ViewChild('modalContent') modalContent: TemplateRef<any>;
 
   view: CalendarView = CalendarView.Month;
